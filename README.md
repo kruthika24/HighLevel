@@ -44,13 +44,18 @@ The framework publishes allure, cucumber.json and video reports
 # Key Features
 - Cucumber BDD framework
 - Page Object Design pattern
-- SuperTest API Integration
-- Multi envrionment support
-- Allure Report
+- Multi envrionment concept
+- Allure Report and Video reporting feature
 - Custome file download folder
-- File/Folder utilities
-- Assertion utilites
+- File/Data utilities
+- Selectors/Helper classes
 - Steps Logging mechanism
+- Data tables
+
+# Screenshots- Report
+![image](https://user-images.githubusercontent.com/32395872/167259001-aeeba269-2486-4241-9513-6bf63f28ff39.png)
+![image](https://user-images.githubusercontent.com/32395872/167259015-640e51ad-b264-42e3-8ac4-8af0875454c9.png)
+
   
 # References
 1. WebdriverIO - https://webdriver.io/
