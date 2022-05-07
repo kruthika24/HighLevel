@@ -2,11 +2,11 @@
 Automation-Assessment
 
 # Requirements
-Typescript 
-Node v16 or higher
-WebdriverIO 7.19
-VSCode 
-Cucumber-Gherkins Support extension
+-Typescript 
+-Node v16 or higher
+-WebdriverIO 7.19
+-VSCode 
+-Cucumber-Gherkins Support extension
 
 # Browser Support 
 1. Chrome
