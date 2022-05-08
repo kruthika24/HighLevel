@@ -9,7 +9,7 @@ Automation-Assessment
 - Cucumber-Gherkins Support extension
 
 # Browser Support 
-1. Chrome
+1. Chrome - configured here to run on maximised and incognito mode by default
 
 # Project Structure
 - config
