@@ -48,7 +48,7 @@ The framework publishes allure, cucumber.json and video reports
 - Multi envrionment concept
 - Allure Report and Video reporting feature
 - Custome file download folder
-- File/Data utilities
+- File/Data and retry utilities
 - Selectors/Helper classes
 - Steps Logging mechanism
 - Data tables
