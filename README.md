@@ -56,7 +56,7 @@ The framework publishes allure, cucumber.json and video reports
 # Screenshots- Report
 ![image](https://user-images.githubusercontent.com/32395872/167259001-aeeba269-2486-4241-9513-6bf63f28ff39.png)
 ![image](https://user-images.githubusercontent.com/32395872/167259015-640e51ad-b264-42e3-8ac4-8af0875454c9.png)
-![image](https://user-images.githubusercontent.com/32395872/167337743-c215f390-ed0e-43a9-96d5-026ce05d8cd4.png)
+![image](https://user-images.githubusercontent.com/32395872/167337835-525c46bb-3e96-4d18-bcfd-7c28d0e1fada.png)
 
   
 # References
