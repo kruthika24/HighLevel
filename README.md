@@ -13,18 +13,18 @@ Automation-Assessment
 
 # Project Structure
 - config
-  --wdio.config.ts
+  - --wdio.config.ts
 - src
-  --pages
-    -- samplepages.ts
-  --uploads
-  --utils
-    --helper.ts
+  - --pages
+    - -- samplepages.ts
+  - --uploads
+  - --utils
+    - --helper.ts
 - test
-  --features
-    -- sample.feature
-  --step-definitions
-    -- sample.steps.ts
+  - --features
+    - -- sample.feature
+  - --step-definitions
+    - -- sample.steps.ts
 - package.json
 - tsconfig.json
 
