@@ -1,0 +1,13 @@
+{
+    "cucumberautocomplete.customParameters": [
+
+
+
+        "./test/step-definitions/*.ts"
+    ],
+    "cucumberautocomplete.steps": [
+        "./test/step-definitions/*.steps.ts"
+        ],
+    "cucumberautocomplete.syncfeatures": "./test/features/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+}

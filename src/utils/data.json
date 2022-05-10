@@ -1,0 +1,23 @@
+{
+    "gohighlevel": {
+        "loginUrl": "https://app.gohighlevel.com",
+        "loginPageText": "Sign into your account",
+        "homePagetitle": "Universal Agency",
+        "loginPagetitle": "Login",
+        "email": "kruthika.t24@gmail.com",
+        "password": "test@123",
+        "confirmDeleteMesg1": "Are you sure, you want to delete this step?",
+        "confirmDeleteMesg2": "The changes will only take affect when you save this workflow",
+        "launchpadText": "Let's get you on the path to success",
+        "dashBoardText": " Pipeline Value ",
+        "opportunitiesText": " Opportunities ",
+        "automationText": " Automation ",
+        "defaultEmailActionName": "Email-Test",
+        "defaultTesteamil": "test@abc.com",
+        "defaultSubject": "subjectTest",
+        "defaultMessageBox": "test-Messsage",
+        "defaultStartTime": "08:00 am",
+        "defaultEndTime": "05:30 pm",
+        "defaultDays": "mon,tue,wed"
+    }
+}

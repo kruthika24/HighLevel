@@ -1,0 +1,142 @@
+class Selectors {
+
+    readonly loginPage = {
+
+        headingText: $('.heading2'),
+        username: $('#email'),
+        password: $('#password'),
+        submit: '//button[contains(text(),\'Sign in\')]'
+    }
+
+
+    readonly homePage = {
+        // dashboard : '//*[@id="sb_dashboard"]',
+        // opportunities : '//*[@id="sb_opportunities"]',
+        // conversations : '//*[@id="sb_conversations"]',
+        // calendars : '//*[@id="sb_calendars"]',
+        // contacts : '//*[@id="sb_contacts"]',
+        // payments : '//*[@id="sb_payments"]',
+        // marketing : '//*[@id="sb_marketing"]',
+        // automation : '//*[@id="sb_automation"]',
+        // sites : '//*[@id="sb_sites"]',
+        // reputation : '//*[@id="sb_reputation"]',
+        // reporting : '//*[@id="sb_reporting"]',
+        // settings : '//*[@id="sb_settings"]',
+
+        // <--- replaced the above with single selector --->
+        tabselectors: `//*[@id=\'sb_obj\']`,
+        containsText: '//*[contains(text(),\'obj\')]',
+        download: '//a[contains(@href, \'download\')]',
+        signout: '//a[contains(text(),\'Signout\')]',
+        switchOldSlide: '//a[contains(text(),\'Switch to Old Sidebar\')]',
+        profileDropdwn: '//div[contains(text(),\' KQ \')]',
+        globalsearch: 'div[id=\'globalSearchOpener\']',
+        launchPad: $('launchpad-title text-center'),
+    }
+
+    readonly automationPage = {
+
+        workflows: {
+            searchWorkflow: '#pg-workflow-list__txt--search-workflow',
+            summaryGrid: 'div[class*=\'flex-1\'] div[class*=\'align-middle\'] table',
+            selectTemplate: '//h3[contains(text(),\'Start from scratch\')]',
+            createWorkflow: 'button[class*=\'btn--create-workflow\']',
+            close: '//button[text()="Close"]',
+            closePanel: 'button[aria-label="Close panel"]',
+            editWorkflowName: 'div[id*="edit-workflow-name"]',
+            saveWorkflowBtn: 'button[id=\'cmp-header__btn--save-workflow\']',
+            saveBtn: '//button[contains(text(),\'Save Action\')]',
+            newTrigger: '//*[contains(text(),\' Add New Workflow Trigger \')]',
+            searchAction: 'input[id="cmp-act-opt__txt--search"]',
+            firstActionBtn: '//div[contains(text(),\'Add your first Action\')]',
+            saveTrigger: '//button[contains(text(),\'Save Trigger\')]',
+            cancelBtn: '//button[contains(text(),\' Cancel \')]',
+            deleteBtn: '//button[contains(text(),\' Delete \')]',
+            actionNameInput: '//label[contains(text(),\' Action Name \')]/following-sibling::input',
+            fromNameInput: '//label[contains(text(),\' From Name \')]/following-sibling::input',
+            testEmailsInput: '//label[contains(text(),\' Test Emails \')]/following-sibling::input',
+            messageBoxInput: '#tinymce',
+            subjectInput: '//label[contains(text(),\' Subject \')]/following-sibling::input',
+            templateDropdown: '#uiselect-input-search',
+            addEmailAttachment: 'input[name="vacancyImageFiles"][type="file"]',
+            sendTestMailBtn: '//button[contains(text(),\'Send Test Mail\')]',
+            emailHover: '//p[contains(text(),\'Email \')]/following-sibling::div[1]/div[1]/div[1]',
+            actionComment: '//a[contains(text(),\' Comment \')]',
+            actionMove: '//a/p[contains(text(),\'Move\')]',
+            actionCopy: '//a/p[contains(text(),\'Copy\')]',
+            actionDelete: '//a[contains(text(),\' Delete \')]',
+            deleteAction: '//a[contains(text(),\' Delete Action \')]',
+            copyAction: '//a[contains(text(),\' Copy Action \')]',
+            moveAction: '//a[contains(text(),\' Move Action \')]',
+            draftPublishToggle: '*[id*=\'cmp-action-bar__tgl--draft-publish-workflow\']',
+            testWorkflowBtn: 'button[id*=\'cmp-action-bar__btn--test-workflow\']',
+            selectContact: 'span[class=\'inline-block w-full rounded-md shadow-sm selected\']',
+            inputsearch: '#uisearchselect-input-search',
+            runTest: '//button[contains(text(),\' Run Test \')]',
+            actionHover: '//p[contains(text(),\'obj \')]/following-sibling::div[1]/div[1]/div[1]',
+            actionName: '//label[contains(text(),\' Action Name \')]/following-sibling::input',
+            templatesDropdown: '//label[contains(text(),\' Templates \')]/following-sibling::div[1]',
+        },
+
+        confirmDelete: '//button[contains(text(),\'Delete\')]',
+        confirmCancel: '//button[contains(text(),\'Cancel\')]',
+        spaceText: '//*[contains(text(),\' obj \')]',
+        divContainstext: '//div[contains(text(),\'obj\')]',
+        workflowTabs: '#cmp-action-bar__tab--obj',
+        automationTabs: '#tb_obj',
+        successNotificationMesg: '//p[contains(text(),\'Workflow has been saved.\')]',
+
+        campaign: {
+            addNewEventText: '//*[text()=" Add New Event "]',
+            eventClose: '//*[@id="add-event-modal"]/div/div/div/div/button',
+            composeSms: '//*[text()=\' Compose SMS  \']',
+            istext: '//*[text()=\'obj\']',
+            isNthtext: '(//*[text()=\'obj\'])[2]',
+            smsName: '//*[text()=\' Compose SMS  \']/../following-sibling::div/div/div/div[2]/input',
+            smsattachFile: '//*[text()=\' Compose SMS  \']/../following-sibling::div[2]/div/div/input',
+            emailattachFile: '//*[text()=\' Compose Email  \']/../following-sibling::div[2]/div/input',
+            emailName: '//*[text()=\' Compose Email  \']/../following-sibling::div/div[1]/div/div/input',
+            emailSubject: 'input[name="subject"]',
+            picktemplate: '*[placeholder="Pick message template"]',
+            customeTimeToggle: 'button[id="windowsms"]',
+            saveSms: '//*[text()=\' Compose SMS  \']/../following-sibling::div[2]/div[2]/div/button[text()=\' Save \']',
+            savemail: '//*[text()=\' Compose Email  \']/../following-sibling::div[2]/div[2]/div/button[text()=\' Save \']',
+            mobileNum: '*[placeholder="Mobile Phone Number"]',
+            sendTest: '//button[text()=\' Send test \']',
+            campaignName: 'input[placeholder="New Campaign Name"]',
+            saveBtn: '(//*[text()="Save"])[1]',
+            cancel: '//*[text()="Cancel"]',
+            closeBtn: '//button[text()="Close"]',
+            draft: '//*[text()="Draft"]',
+            published: '//*[text()="Published"]',
+            statustoggle: '#__BVID__1231__BV_toggle_',
+            actions: '//*[text()="Actions"]',
+            copyCampaign: '//a[text()="Copy Campaign"]',
+            addEventBtn: '//*[text()=" Add Event "]',
+            windowToggle: '#account-buffer-tgl',
+            usersDropdown: '//label[contains(text(),\'User\')]/following-sibling::div/div/select',
+            adduser: 'button[title="Add user"]',
+            selectCampaign: '[title="Select campaign"]',
+            fromName: 'input[name="from_name"]',
+            leadValue: '//label[contains(text(),\'Lead value\')]/following-sibling::div/div[1]/div/input',
+            tags: '//label[contains(text(),\'Tags\')]/following-sibling::div/div',
+            saveConfig: '//*[@id="campaignconfiguration"]/div[2]/*[contains(text(),\'Save\')]',
+            cancelConfig: '//*[@id="campaignconfiguration"]/div[2]/*[contains(text(),\'Cancel\')]',
+            back: '*[id="back"]',
+            delete: '//*[contains(text(),\'obj\')]/parent::div[1]/following-sibling::div[2]/div[2]/button',
+            deletebtn: '//*[contains(text(),\'obj\')]/parent::div[1]/following-sibling::div[2]/div[2]/div/a[contains(text(),\'Delete\')]',
+            conditionDropdown: $('select[name="condition"]'),
+            includedDays: 'label[for=\'obj\']',
+            startTime: $('select[name="startTime"]'),
+            endTime: $('select[name="endTime"]'),
+            labelText: '//label[contains(text(),\'obj\')]',
+            editTemplate: '//*[text()=\'obj\']/ancestor::div[3]/following-sibling::div/ul/li/a[text()=\'Edit\']',
+            removeTemplate: '//*[text()=\'obj\']/ancestor::div[3]/following-sibling::div/ul/li/a[text()=\'Remove\']',
+
+        }
+
+    }
+}
+
+const selectors = new Selectors();
+export { selectors };
