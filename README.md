@@ -35,12 +35,15 @@ Automation-Assessment
 3. npm test or npm run test
 4. npm test -- --cucumberOpts.tagExpressions='@tag' --spec='./features/<featurefilename>.feature' (To run specific test scenario)
 5. npm run report - for reporting
+6. By default the video reporter generates the .mp4 video after every successful run under _results_ folder (you comment this feature under wdio.config.ts)
 
   
 # Reporting
 The framework publishes allure, cucumber.json and video reports
 1. Execute the command : "npm run report"  - to generate a clean allure report after the end of test execution
 2. Error or failed screenshots will be captured in the allure-report
+3. Execution video also present on allure report
+4. By deafault the video folders and other report folders are deleted at the start of run.
 
 # Key Features
 - Cucumber BDD framework
