@@ -30,7 +30,7 @@ class Automation {
 
     async selectTemplate(value) {
         const elem = await helper.selectorBasedOntext(value, selectors.automationPage);
-        console.log(elem);
+        // console.log(elem);
         await helper.click(elem)
     }
 
@@ -52,7 +52,7 @@ class Automation {
         await helper.clickBasedOntext(' Campaign Configuration ', selectors.homePage.containsText);
         if (array.Window == 'true') {
             await helper.click(selectors.automationPage.campaign.windowToggle);
-            const label = await helper.selectorBasedOntext('Condition', selectors.automationPage.campaign.labelText);
+            const label = await helper.selectorBasedOntext('Condition', selectors.common.labelText);
             expect(await helper.ifElementDisplayed(label)).toBe(true);
             await helper.addlog('On Conditions tab', 'success');
             await this.fillCampaignConfigWindow(array.Condition);
@@ -77,7 +77,7 @@ class Automation {
         await helper.click(a);
         // await helper.clickBasedOntext(` ${tabName} `, selectors.homePage.containsText);
         await helper.scrollToElement(`//*[contains(text(),\'${name}\')]`);
-        const b = await helper.selectorBasedOntext(`${name}`, selectors.automationPage.spaceText);
+        const b = await helper.selectorBasedOntext(`${name}`, selectors.common.spaceText);
         expect(await helper.ifElementDisplayed(b)).toBe(true);
         helper.addlog("Successfully viewed on", "Campaign grid")
     }
@@ -87,7 +87,7 @@ class Automation {
         await helper.waitForDisplayed(selectors.automationPage.campaign.addEventBtn, 1000);
         await helper.click(selectors.automationPage.campaign.addEventBtn);
         await helper.waitForDisplayed(selectors.automationPage.campaign.addNewEventText, 1000);
-        await helper.clickBasedOntext(event, selectors.automationPage.campaign.istext);
+        await helper.clickBasedOntext(event, selectors.common.istext);
         await helper.inputText(selectors.automationPage.campaign.smsName, name);
         await helper.click(selectors.automationPage.campaign.saveSms);
         await helper.pause(1)
@@ -101,7 +101,7 @@ class Automation {
         await helper.waitForDisplayed(selectors.automationPage.campaign.addEventBtn, 1000);
         await helper.click(selectors.automationPage.campaign.addEventBtn);
         await helper.waitForDisplayed(selectors.automationPage.campaign.addNewEventText, 1000);
-        await helper.clickBasedOntext(event, selectors.automationPage.campaign.istext);
+        await helper.clickBasedOntext(event, selectors.common.istext);
         await helper.pause(1)
         await $(selectors.automationPage.campaign.emailSubject).clearValue();
         await helper.pause(1)
@@ -152,7 +152,7 @@ class Automation {
         await helper.click(await del1)
         await helper.pause(1)
         await helper.click(del2)
-        // await helper.acceptAlert();
+        await helper.enterKeys();
         await helper.pause(2);
         await helper.addlog('Deleted Campaign successfully', name);
     }

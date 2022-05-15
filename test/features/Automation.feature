@@ -1,4 +1,4 @@
-@HighLevel @AutomationTab
+@AutomationTab
 Feature: The Assessment Automation - To test the 'gohighlevel' Automation Tab/Menu
 
     @Test @HighLevel @AutomationTab
@@ -14,7 +14,7 @@ Feature: The Assessment Automation - To test the 'gohighlevel' Automation Tab/Me
             | kruthika.t24@gmail.com | Test@123 | launchpad,dashboard,opportunities,automation |
 
 
-    @Test @E2E @HighLevel @AutomationTab
+    @Test @AutomationTab
     Scenario Outline: 02. As a user, I perform the Automation workflow on 'gohighlevel' website
         Given I am on the "gohighlevel" page
         When I am on login page and see a header with text loginPageText and title - Login

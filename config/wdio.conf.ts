@@ -6,7 +6,7 @@ const path = require('path')
 import { downloadDir } from '../src/utils/pathConstants'
 import report from '@wdio/allure-reporter';
 
-let appbaseURL = 'https://app.gohighlevel.com';
+export const appbaseURL = 'https://app.gohighlevel.com';
 
 export const config: Options.Testrunner = {
     //

@@ -69,6 +69,22 @@ Then(/^Log in with credentials - (.+) and (.+) having (.+)$/, async (email, pass
 
 });
 
+Then(/^Login to the application with (.+) and (.+)$/, async function (email, password) {
+  await helper.openURL(data.getData('loginUrl'));
+  const header = await selectors.loginPage.headingText;
+
+  let expectedText = data.getData('loginPageText')
+  await expect(await header.getText()).toEqual(expectedText);
+  await helper.pause(2)
+  await helper.addlog('Validated heading on the login', `${await header.getText()}`);
+  await loginPage.loginWithCredentials(email, password);
+  await helper.addlog('Entering email and password', `${email} , ${password}`)
+  const dashboard = await helper.selectorBasedOntext('dashboard', selectors.homePage.tabselectors);
+  await helper.waitForDisplayed(dashboard, 1000)
+  console.log('******** SUCCESSFULLY LOGGED IN ********');
+
+});
+
 
 Given(/^I open the browser and load the url (.+)$/, { wrapperOptions: { retry: 2 } }, async function (homepageurl: string) {
   await helper.openURL(homepageurl)

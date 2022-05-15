@@ -1,7 +1,6 @@
-@HighLevel
 Feature: The Assessment Automation - gohighlevel Login/Home Page
 
-    @HighLevel @Test @Login
+    @Test @Login
     Scenario Outline: As a user, I can log into the gohighlevel app
         Given I am on the "gohighlevel" page
         When I am on login page and see a header with text <LoginHeaderText> and title - <LoginTitle>

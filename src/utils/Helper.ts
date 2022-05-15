@@ -4,6 +4,7 @@ import { isReturnStatement } from 'typescript';
 import { selectors } from './Selectors';
 import report from '@wdio/allure-reporter';
 import { WebdriverIO } from '@wdio/types/build/Options';
+import { multiremote } from 'webdriverio';
 
 class Helper {
 
@@ -35,6 +36,7 @@ class Helper {
     }
 
     async inputText(selector, text) {
+        // await helper.pause(1)
         const elem = await $(selector);
         await elem.waitForDisplayed();
         await elem.clearValue();
@@ -127,6 +129,37 @@ class Helper {
         await this.click(elem.selector);
     }
 
+    async clickBasedOntextandEnter(objElement: string, label) {
+        const xelement = await label.replace('obj', objElement);
+        const elem = await $(xelement);
+        // console.log(elem.selector)
+        await this.waitForDisplayed(elem.selector, 1000);
+        browser.$(elem.selector).click().then(async () =>browser.keys("Enter"))
+        // await helper.acceptAlert();
+    }
+
+    async isToggled(selector) {
+        const a = await $(selector).getAttribute("class")
+        if (a.includes('bg-curious-blue-600')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    async doubleClick(selector){
+        await this.waitForDisplayed(selector)
+        const elem = await $(selector);
+        await elem.doubleClick();
+    }
+
+    async rightClick(selector, value){
+    await this.waitForDisplayed(selector);
+    const elem = await $(selector)
+    await elem.click({button : 'right'})
+    const xpath = await $(value);
+    await browser.execute((elem1) => elem1.click(), xpath);
+    }
 
     async selectDropdown(elements, value) {
         for (let i = 0; i < (await elements).length; i++) {
@@ -139,6 +172,12 @@ class Helper {
         }
     }
 
+    async isChecked(selector){
+        await this.scrollToElement(selector)
+        const checkbox = await $(selector);
+        const xcheckbox = await (await checkbox.getProperty('checked')).valueOf();
+        return xcheckbox;
+    }
 
     async selectDropdownBasedText(element, value) {
         // console.log(element)
@@ -175,8 +214,21 @@ class Helper {
         await elem.scrollIntoView();
     }
 
+    async scrollToElementAndClick(b) {
+        await this.pause(1)
+        expect(await this.ifElementDisplayed(b)).toBe(true);
+        await this.scrollToElement(b);
+        await this.click(b)
+        await this.pause(1)
+    }
+
     async acceptAlert() {
         await browser.acceptAlert();
+    }
+
+    async enterKeys() {
+        await browser.keys('Enter');
+        console.log('enter key')
     }
 
     async mouseHover(element) {
@@ -218,6 +270,12 @@ class Helper {
     addlog(mesg: string, value: any) {
         console.log(mesg + " : " + value);
         report.addStep(mesg + " : " + value);
+    }
+
+    async switchWindow( value: any) {
+        await helper.pause(1)
+        await browser.switchWindow(value);
+        await helper.pause(1)
     }
 
 }
