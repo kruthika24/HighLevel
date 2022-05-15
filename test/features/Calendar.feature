@@ -50,7 +50,7 @@ Feature: The Assessment Automation - To test the 'gohighlevel' Automation Tab/Me
         And Login to the application with <Email> and <Password>
         Then Navigate to the calendar page and schedule for the below
             | Index | ScheduleName | Desc        | urlSlug | CustomCode | TeamIndex | Date      | Time     | FirstName | LastName | Email    | Phone      |
-            | 1     | Schedule     | description | slug    | K123       | 1         | 2022-5-18 | 12:00 PM | Patient   | K        | @abc.com | 9090909090 |
+            | 1     | Schedule     | description | slug    | K123       | 1         | 2022-5-25 | 12:00 PM | Patient   | K        | @abc.com | 9090909090 |
 
         @qa
         Examples:
