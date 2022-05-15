@@ -34,7 +34,6 @@ Automation-Assessment
 2. npm install or npm i
 3. npm test or npm run test
 4. npm test -- --cucumberOpts.tagExpressions='@tag' --spec='./features/<featurefilename>.feature' (To run specific test scenario)
-  (Or you could simply remove @HighLevel tag from the scenario which you dont want to run)
 5. npm run report - for reporting
 6. By default the video reporter generates the .mp4 video after every successful run under _results_ folder (you comment this feature under wdio.config.ts)
 
