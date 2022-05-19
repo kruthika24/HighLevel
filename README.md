@@ -61,6 +61,10 @@ The framework publishes allure, cucumber.json and video reports
 ![image](https://user-images.githubusercontent.com/32395872/167259015-640e51ad-b264-42e3-8ac4-8af0875454c9.png)
 ![image](https://user-images.githubusercontent.com/32395872/167337835-525c46bb-3e96-4d18-bcfd-7c28d0e1fada.png)
 
+- Video Reporter Sample 
+https://user-images.githubusercontent.com/32395872/169315750-b347eb7e-e065-40d3-a52c-f5f688924fc6.mp4
+
+
   
 # References
 1. WebdriverIO - https://webdriver.io/
